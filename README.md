@@ -12,3 +12,7 @@ This repository contains all sources and slides to replay the Tutoring-Session *
 ## Run
 
 * Tests can be executed with Maven or directly in your IDE.
+
+## Run JBang Sample Zip Code Converter
+
+* See instructions here: [README.md](jbang/README.md)
