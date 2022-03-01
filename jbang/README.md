@@ -7,6 +7,7 @@
 ### Run
 
 * Start script with `jbang ZipCityConverter.java` in this folder
+* (Optional) Install JBang IDE Plugin, eg. for [IntelliJ](https://plugins.jetbrains.com/plugin/18257-jbang) and "Run by JBang" 
 
 ### Execute
 
