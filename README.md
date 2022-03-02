@@ -16,8 +16,3 @@ This repository contains all sources and slides to replay the Tutoring-Session *
 ## Run JBang Sample Zip Code Converter
 
 * See instructions here: [README.md](jbang/README.md)
-
-## Credits
-
-* © openrouteservice.org by HeiGIT | Map data © OpenStreetMap contributors
-* 
