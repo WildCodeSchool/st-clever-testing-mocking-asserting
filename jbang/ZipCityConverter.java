@@ -27,7 +27,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-@Path("/zip2city")
+@Path("/city")
 @ApplicationScoped
 public class ZipCityConverter {
 
@@ -44,9 +44,17 @@ public class ZipCityConverter {
     }
 
     @GET
+    @Path("/zip")
     @Produces(MediaType.APPLICATION_JSON)
     public ZipCityDto zipToCity(@QueryParam("zip") String zip) {
         return zipCityMap.get(zip);
+    }
+
+    @GET
+    @Path("/coord")
+    @Produces(MediaType.APPLICATION_JSON)
+    public ZipCityDto cityToCoord(@QueryParam("city") String city) {
+        return zipCityMap.values().stream().filter(it -> it.getCity().equalsIgnoreCase(city)).findFirst().get();
     }
 
     @Data
@@ -54,6 +62,8 @@ public class ZipCityConverter {
 
         private String zip;
         private String city;
+        private Double lat;
+        private Double lon;
 
     }
 }

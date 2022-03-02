@@ -12,4 +12,5 @@
 ### Execute
 
 * Open http://localhost:8080/q/swagger-ui for Swagger-UI
-* Open http://localhost:8080/zip2city?zip=53227 for sample conversion for Bonn DT AG
+* Open http://localhost:8080/city/zip?zip=53227 for sample conversion for Bonn DT AG
+* Open http://localhost:8080/city/coord?city=Bonn for first ZIP and coords for Bonn
