@@ -60,8 +60,10 @@ public class TestServiceAsserting {
         // Act
         RouteDTO res = routeServiceMock.calculateRouteFromTo("anystring", "anystring");
 
+        // routeDTO = null;
+
         // Assert AssertJ
-        assertThat(routeDto).isEqualTo(res);
+        assertThat(routeDto).isNotNull().isEqualTo(res);
 
         log.info(res.toString());
     }
