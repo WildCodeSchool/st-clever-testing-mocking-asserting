@@ -50,9 +50,10 @@ public class PlainAssertions {
         assertThat(planetToMass).containsAllEntriesOf(planetToMass2);
     }
 
+    @Test
     public void testDates() {
         LocalDate todayMinus2Days = LocalDate.now().minusDays(2);
-        assertThat(todayMinus2Days).isBefore("03-04-2020").isCloseTo("03-04-2020", within(1, ChronoUnit.DAYS));
+        assertThat(todayMinus2Days).isBefore("2022-03-04").isCloseTo("2022-03-02", within(1, ChronoUnit.DAYS));
         assertThat(todayMinus2Days).isBetween("2017-01-31", "2017-12-31");
     }
 

@@ -49,7 +49,7 @@ public class TestServiceMocking {
         when(routeServiceMock.calculateRouteFromTo(anyString(), anyString())).thenReturn(routeDto);
 
         // Act
-        RouteDTO res = routeServiceMock.calculateRouteFromTo("anystring", "anystring");
+        RouteDTO res = routeServiceMock.calculateRouteFromTo("donald", "duck");
 
         // Assert
         assertThat(res).isEqualTo(routeDto);
@@ -67,7 +67,7 @@ public class TestServiceMocking {
         // when(routeServiceMock.calculateRouteFromTo("hello", anyString())).thenReturn(routeDto);
 
         // Act
-        RouteDTO res = routeServiceMock.calculateRouteFromTo("anystring", "anystring");
+        RouteDTO res = routeServiceMock.calculateRouteFromTo("donald", "duck");
 
         // Assert
         assertThat(res).isNull();
@@ -171,13 +171,17 @@ public class TestServiceMocking {
 
     private RouteDTO createRouteDto() throws ParseException {
         Faker faker = new Faker(Locale.US);
+
         RouteDTO.RouteDTOBuilder routeDTOBuilder =  RouteDTO.builder();
+
         Waypoint.WaypointBuilder waypointBuilder = Waypoint.builder();
         waypointBuilder.lat(nformat.parse(faker.address().latitude()).doubleValue());
         waypointBuilder.lon(nformat.parse(faker.address().longitude()).doubleValue());
         waypointBuilder.identifier(faker.address().cityName());
+
         List<Waypoint> waypoints = Lists.newArrayList(waypointBuilder.build());
         routeDTOBuilder.waypoints(waypoints);
+
         RouteDTO routeDto = routeDTOBuilder.build();
         return routeDto;
     }

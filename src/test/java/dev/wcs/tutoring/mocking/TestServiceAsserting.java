@@ -2,14 +2,9 @@ package dev.wcs.tutoring.mocking;
 
 import com.github.javafaker.Faker;
 import com.google.common.collect.Lists;
-import dev.wcs.tutoring.external.service.covid.COVIDService;
 import dev.wcs.tutoring.external.service.route.RouteService;
 import dev.wcs.tutoring.external.service.route.dto.RouteDTO;
 import dev.wcs.tutoring.external.service.route.dto.Waypoint;
-import dev.wcs.tutoring.external.service.weather.WeatherService;
-import dev.wcs.tutoring.service.TravelService;
-import dev.wcs.tutoring.service.domain.TravelInformation;
-import dev.wcs.tutoring.service.repository.TravelHistoryRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -22,8 +17,7 @@ import java.util.Locale;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
 
 @Slf4j
 public class TestServiceAsserting {
