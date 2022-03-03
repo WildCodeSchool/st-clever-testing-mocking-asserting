@@ -18,7 +18,7 @@ public class TravelInformationAssert extends AbstractAssert<TravelInformationAss
         isNotNull();
 
         // overrides the default error message with a more explicit one
-        String assertjErrorMessage = "\nExpecting TravelInformation to have no weather\n but was not null\n";
+        String assertjErrorMessage = "\nExpecting TravelInformation to have no weather information \n but was not null\n";
 
         if ((actual.getWeatherCondition() != null) || (actual.getWeatherTemperature() != null)) {
             failWithMessage(assertjErrorMessage, actual);
